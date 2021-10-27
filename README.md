@@ -110,13 +110,13 @@ If successful, you should see something like this:
 
 ![Kibana](https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Images/Kibana%20Home.png)
 
-- Run the playbook filebeat-playbook.yml and navigate to http://[elk.server.public.IP]:5601/app/kibana#/home/tutorial/systemLogs. Click the "check data" button at the bottom of the page to check that the installation worked as expected.
+- Run the playbook filebeat-playbook.yml and navigate to http://[elk.server.public.IP]:5601/app/kibana#/home/tutorial/systemLogs. Click the "check data" button at the bottom of the page to check that the installation worked as expected, then click the "System logs dashboard" button.
 
 If successful, you should see something like this:
 
-![SysLogs](https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Images/Kibana%20Home.png)
+![SysLogs](https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Images/Kibana%20Filebeat%20Dashboard.png)
 
-- Run the playbook metricbeat-playbook.yml and navigate to http://[elk.server.public.IP]:5601/app/kibana#/home/tutorial/dockerMetrics. Click the "check data" button at the bottom of the page to check that the installation worked as expected.
+- Run the playbook metricbeat-playbook.yml and navigate to http://[elk.server.public.IP]:5601/app/kibana#/home/tutorial/dockerMetrics. Click the "check data" button at the bottom of the page to check that the installation worked as expected, then click the "Docker metrics dashboard" button.
 
 If successful, you should see something like this:
 
