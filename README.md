@@ -2,11 +2,11 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Network Diagram](Diagrams/Elk Azure Network Diagram.drawio.png)
+![Network Diagram](https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Diagrams/Elk%20Azure%20Network%20Diagram.drawio)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the [Ansible] (https://github.com/arice1606/Cybersecurity-Project-One/tree/main/Ansible) file may be used to install only certain pieces of it, such as Filebeat.
 
-  - [DVWA-Playbook] (https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Ansible/DVWA-Playbook)
+  - [DVWA-Playbook] (https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Ansible/DVWA-Playbook.yml)
   - [ELK-Playbook] (https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Ansible/elk-playbook.yml)
   - [Filebeat-Playbook] (https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Ansible/filebeat-playbook.yml)
   - [Metric-Playbook] (https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Ansible/metricbeat-playbook.yml)
@@ -18,7 +18,6 @@ This document contains the following details:
   - Beats in Use
   - Machines Being Monitored
 - How to Use the Ansible Build
-
 
 ### Description of the Topology
 
@@ -74,7 +73,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![Docker ps](https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Images/Elk%20docker%20ps.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -97,11 +96,28 @@ SSH into the control node and follow the steps below:
 - Copy the filebeat-config.yml and metricbeat-config.yml to /etc/ansible/files
 - Update the /etc/ansible/hosts file to include the private IP addresses of your webservers and add ansible_python_interpreter=/usr/bin/python3 after the IP addresses.
 - While in the hosts file, also add a group called [elk] and add the IP address of this server with ansible_python_interpreter=/usr/bin/python3 after the IP address. 
-- Run the ansible-playbook-activity.yml and navigate to http://[load.balancer.public.ip]/setup.php to check that the installation worked as expected.
 
+
+- Run the DVWA-Playbook.yml and navigate to http://[load.balancer.public.ip]/setup.php to check that the installation worked as expected.
+
+If successful, you should see something like this:
+
+![DVWA] (https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Images/DVWA.png)
 
 - Run the playbook elk-playbook.yml and navigate to http://[elk.server.public.IP]:5601/app/kibana to check that the installation worked as expected.
 
+If successful, you should see something like this:
+
+![Kibana] (https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Images/Kibana%20Home.png)
+
 - Run the playbook filebeat-playbook.yml and navigate to http://[elk.server.public.IP]:5601/app/kibana#/home/tutorial/systemLogs. Click the "check data" button at the bottom of the page to check that the installation worked as expected.
 
+If successful, you should see something like this:
+
+![SysLogs] (https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Images/Kibana%20Home.png)
+
 - Run the playbook metricbeat-playbook.yml and navigate to http://[elk.server.public.IP]:5601/app/kibana#/home/tutorial/dockerMetrics. Click the "check data" button at the bottom of the page to check that the installation worked as expected.
+
+If successful, you should see something like this:
+
+![Metrics] (https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Images/Kibana%20Metricbeat%20Dashboard.png)
