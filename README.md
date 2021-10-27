@@ -98,25 +98,25 @@ SSH into the control node and follow the steps below:
 - While in the hosts file, also add a group called [elk] and add the IP address of this server with ansible_python_interpreter=/usr/bin/python3 after the IP address. 
 
 
-- Run the DVWA-Playbook.yml and navigate to http://[load.balancer.public.ip]/setup.php to check that the installation worked as expected.
+- Run the DVWA-Playbook.yml and navigate to (http://[load.balancer.public.ip]/setup.php) to check that the installation worked as expected.
 
 If successful, you should see something like this:
 
 ![DVWA](https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Images/DVWA.png)
 
-- Run the playbook elk-playbook.yml and navigate to http://[elk.server.public.IP]:5601/app/kibana to check that the installation worked as expected.
+- Run the playbook elk-playbook.yml and navigate to (http://[elk.server.public.IP]:5601/app/kibana) to check that the installation worked as expected.
 
 If successful, you should see something like this:
 
 ![Kibana](https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Images/Kibana%20Home.png)
 
-- Run the playbook filebeat-playbook.yml and navigate to http://[elk.server.public.IP]:5601/app/kibana#/home/tutorial/systemLogs. Click the "check data" button at the bottom of the page to check that the installation worked as expected, then click the "System logs dashboard" button.
+- Run the playbook filebeat-playbook.yml and navigate to (http://[elk.server.public.IP]:5601/app/kibana#/home/tutorial/systemLogs). Click the "check data" button at the bottom of the page to check that the installation worked as expected, then click the "System logs dashboard" button.
 
 If successful, you should see something like this:
 
 ![SysLogs](https://github.com/arice1606/Cybersecurity-Project-One/blob/main/Images/Kibana%20Filebeat%20Dashboard.png)
 
-- Run the playbook metricbeat-playbook.yml and navigate to http://[elk.server.public.IP]:5601/app/kibana#/home/tutorial/dockerMetrics. Click the "check data" button at the bottom of the page to check that the installation worked as expected, then click the "Docker metrics dashboard" button.
+- Run the playbook metricbeat-playbook.yml and navigate to (http://[elk.server.public.IP]:5601/app/kibana#/home/tutorial/dockerMetrics). Click the "check data" button at the bottom of the page to check that the installation worked as expected, then click the "Docker metrics dashboard" button.
 
 If successful, you should see something like this:
 
